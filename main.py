@@ -1,5 +1,6 @@
 import game
 import pygame
+import eventos
 from constants import *
 from resources import *
 from player import *
@@ -10,12 +11,9 @@ from camera import *
 from gamelogic import *
 from controlled_character import *
 
-
 # Game starts!
 game.start(DISP_W*2, DISP_H*2)
-
 resources = Resources()
-
 player = Player(40, 40, pygame.Rect(0,0,15,35), resources.player)
 ai = ControlledCharacter(100, 40, pygame.Rect(0,0,15,35), resources.player)
 tilemap = Tilemap()
@@ -36,6 +34,10 @@ sheet = game.load_image('graphics/blocks1.png')
 # Gameloop
 gamelogic.start()
 while True:
+    situacion = {"player.x":player.x,"player.y":player.y,"ai":ai.x,"ai":ai.y}
+    evento = eventos.evento(player,situacion)
+    if(evento!=None):
+        evento()
     events = game.get_events()
     if 'QUIT' in events:
         game.quit_game()

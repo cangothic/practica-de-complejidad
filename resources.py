@@ -24,7 +24,7 @@ class Resources:
                  pygame.Rect(112,2,24,40)]
         quieto_der = game.load_sprites(sheet, rects, (0,0,0))
         quieto_izq = game.flip_sprites(quieto_der)
-
+        hola="hola mundo"
         rects = [pygame.Rect(4,4,30,38),
                  pygame.Rect(38,4,30,36)]
         saltando_der = game.load_sprites(sheet, rects, (0,0,0))
@@ -33,8 +33,7 @@ class Resources:
             [quieto_der, quieto_izq],
             [caminando_der,caminando_izq],            
             [saltando_der, saltando_izq]]
-
-        
+                
         sheet = game.load_image('graphics/blocks11.png')
         suelo = game.load_sprite(sheet, pygame.Rect(444,104,32,32))
         subsuelo = game.load_sprite(sheet, pygame.Rect(172,138,32,32))
