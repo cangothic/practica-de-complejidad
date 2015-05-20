@@ -13,11 +13,11 @@ from gamelogic import *
 from controlled_character import *
 
 
-def evento(player,query):
-    funciones = {"001":player.invertir}
+def evento(player,ai,query):
+    funciones = {"001":player.invertir,"002":ai.saltar}
 
     dialogos = [{"player.x":128,"player.y":448,"id":"001"},
-            {"ubicacion":"playa","dinero":"65","id":"004"}]
+            {"aiplayeriguales":True,"id":"002"}]
     validos = []
     tamano = 0
     for event in dialogos:

@@ -19,6 +19,7 @@ class ControlledCharacter(Character):
     def on_start(self):
         self.direction = True
         self.right = True
+        self.jump=False
 
     def saltar(self):
-        self.jump=True
+        self.jump=not self.jump
