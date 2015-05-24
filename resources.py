@@ -24,7 +24,6 @@ class Resources:
                  pygame.Rect(112,2,24,40)]
         quieto_der = game.load_sprites(sheet, rects, (0,0,0))
         quieto_izq = game.flip_sprites(quieto_der)
-        hola="hola mundo"
         rects = [pygame.Rect(4,4,30,38),
                  pygame.Rect(38,4,30,36)]
         saltando_der = game.load_sprites(sheet, rects, (0,0,0))
