@@ -36,8 +36,9 @@ sheet = game.load_image('graphics/blocks1.png')
 gamelogic.start()
 while True:
     aiplayeriguales=abs(player.x-ai.x)<15 and abs(player.y-ai.y)<15
-    situacion = {"player.x":player.x,"player.y":player.y,"ai":ai.x,"ai":ai.y,"aiplayeriguales":aiplayeriguales}
-    evento = eventos.evento(player,ai,situacion)
+    aiai2iguales=abs(ai2.x-ai.x)<15 and abs(ai2.y-ai.y)<15
+    situacion = {"player.x":player.x,"player.y":player.y,"ai":ai.x,"ai":ai.y,"aiplayeriguales":aiplayeriguales,"aiai2iguales":aiai2iguales}
+    evento = eventos.evento(player,ai,ai2,situacion)
     if(evento!=None):
         evento()
     events = game.get_events()

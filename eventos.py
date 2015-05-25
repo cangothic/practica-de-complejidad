@@ -12,12 +12,11 @@ from camera import *
 from gamelogic import *
 from controlled_character import *
 
-
-def evento(player,ai,query):
-    funciones = {"001":player.invertir,"002":ai.saltar}
+def evento(player,ai,ai2,query):
+    funciones = {"001":player.invertir,"002":ai.saltar,"003":ai2.colorear}
 
     dialogos = [{"player.x":128,"player.y":448,"id":"001"},
-            {"aiplayeriguales":True,"id":"002"}]
+            {"aiplayeriguales":True,"id":"002"},{"aiai2iguales":True,"id":"003"}]
     validos = []
     tamano = 0
     for event in dialogos:
