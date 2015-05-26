@@ -26,7 +26,7 @@ class ControlledCharacter(Character):
         self.jump=not self.jump
 
     def colorear(self):
-        resources = Resources()
+        resources = Resources('graphics/arc22.png')
         self.color=not self.color
         if(self.color):
             cambio=resources.cambiar('graphics/arc2.png')

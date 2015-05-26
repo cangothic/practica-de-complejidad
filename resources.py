@@ -29,9 +29,9 @@ class Resources:
             [saltando_der, saltando_izq]]
         return player
         
-    def __init__(self):
+    def __init__(self,imagen):
         # Carga de imagenes
-        self.imagen='graphics/arc22.png'
+        self.imagen=imagen
         sheet = game.load_image(self.imagen)
         #rects = [#pygame.Rect(514,8,24,34),
         #        pygame.Rect(550,8,30,34),
